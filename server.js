@@ -33,44 +33,44 @@ function buildWelcomeEmailHtml(email) {
           </td>
         </tr>
         <tr><td style="padding:35px 40px 20px;">
-          <p style="font-size:15px;color:#5C4033;margin:0 0 8px;line-height:1.6;">
+          <p style="font-size:16px;color:#5C4033;margin:0 0 6px;line-height:1.7;">
             Hola <strong>${email}</strong>,
           </p>
-          <p style="font-size:15px;color:#5C4033;margin:0 0 20px;line-height:1.6;">
+          <p style="font-size:16px;color:#5C4033;margin:0 0 18px;line-height:1.7;">
             &iexcl;Gracias por suscribirte a <strong>Adventour</strong>!
           </p>
-          <p style="font-size:15px;color:#5C4033;margin:0 0 20px;line-height:1.6;">
+          <p style="font-size:15px;color:#5C4033;margin:0 0 18px;line-height:1.6;">
             Nos alegra que hagas parte de nuestra comunidad de viajeros. Desde ahora recibir&aacute;s:
           </p>
           <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:#FFF8F0;border-radius:12px;border:1px solid #E8DCC8;">
-            <tr><td style="padding:20px 30px;">
+            <tr><td style="padding:16px 28px;">
               <table role="presentation" width="100%" cellpadding="0" cellspacing="0">
-                <tr><td style="padding:6px 0;font-size:15px;color:#2C1810;">
-                  <span style="color:#C9A96E;font-size:18px;margin-right:10px;">&#x2708;&#xFE0F;</span> Ofertas exclusivas
+                <tr><td style="padding:5px 0;font-size:15px;color:#2C1810;">
+                  <span style="margin-right:10px;">&#x2708;&#xFE0F;</span> Ofertas exclusivas
                 </td></tr>
-                <tr><td style="padding:6px 0;font-size:15px;color:#2C1810;">
-                  <span style="color:#C9A96E;font-size:18px;margin-right:10px;">&#x1F30E;&#xFE0F;</span> Nuevos destinos
+                <tr><td style="padding:5px 0;font-size:15px;color:#2C1810;">
+                  <span style="margin-right:10px;">&#x1F30E;&#xFE0F;</span> Nuevos destinos
                 </td></tr>
-                <tr><td style="padding:6px 0;font-size:15px;color:#2C1810;">
-                  <span style="color:#C9A96E;font-size:18px;margin-right:10px;">&#x1F381;</span> Descuentos especiales
+                <tr><td style="padding:5px 0;font-size:15px;color:#2C1810;">
+                  <span style="margin-right:10px;">&#x1F381;</span> Descuentos especiales
                 </td></tr>
-                <tr><td style="padding:6px 0;font-size:15px;color:#2C1810;">
-                  <span style="color:#C9A96E;font-size:18px;margin-right:10px;">&#x1F3D6;&#xFE0F;</span> Paquetes tur&iacute;sticos recomendados
+                <tr><td style="padding:5px 0;font-size:15px;color:#2C1810;">
+                  <span style="margin-right:10px;">&#x1F3D6;&#xFE0F;</span> Paquetes tur&iacute;sticos recomendados
                 </td></tr>
               </table>
             </td></tr>
           </table>
-          <p style="font-size:15px;color:#5C4033;margin:20px 0 0;line-height:1.6;">
+          <p style="font-size:15px;color:#5C4033;margin:18px 0 0;line-height:1.6;">
             Prep&aacute;rate para vivir experiencias inolvidables con nosotros.
           </p>
         </td></tr>
         <tr><td style="padding:0 40px 25px;">
           <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:#FBF6EE;border-radius:12px;border:1px solid #E8DCC8;">
             <tr><td style="padding:18px 25px;text-align:center;">
-              <p style="margin:0 0 6px;font-size:13px;color:#8B7355;">
+              <p style="margin:0 0 10px;font-size:14px;color:#5C4033;">
                 &iquest;Quieres explorar nuestros destinos?
               </p>
-              <a href="https://github.com/migueartun/Adventour" target="_blank" style="display:inline-block;background:#7A4A2E;color:#FFF8F0;text-decoration:none;padding:10px 28px;border-radius:50px;font-weight:600;font-size:14px;">
+              <a href="https://migueartun.github.io/Adventour" target="_blank" style="display:inline-block;background:#7A4A2E;color:#FFF8F0;text-decoration:none;padding:12px 32px;border-radius:50px;font-weight:600;font-size:14px;">
                 &#x1F310; Ver p&aacute;gina de turismo
               </a>
             </td></tr>
@@ -78,9 +78,11 @@ function buildWelcomeEmailHtml(email) {
         </td></tr>
         <tr>
           <td style="background-color:#2C1810;padding:30px 40px;text-align:center;">
-            <p style="margin:0 0 6px;font-size:13px;color:rgba(255,255,255,0.5);">
-              Atentamente,<br>
-              <strong style="color:#C9A96E;">Equipo Adventour</strong>
+            <p style="margin:0 0 4px;font-size:14px;color:rgba(255,255,255,0.5);">
+              Atentamente,
+            </p>
+            <p style="margin:0 0 10px;font-size:16px;color:#C9A96E;font-weight:700;">
+              Equipo Adventour
             </p>
             <p style="margin:10px 0 0;font-size:12px;color:rgba(255,255,255,0.35);">
               Cra 45 # 12-34 &bull; Bogot&aacute;, Colombia &bull; +57 (601) 234 5678
