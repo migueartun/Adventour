@@ -1,0 +1,291 @@
+[
+  {
+    "id": 1,
+    "name": "Cartagena",
+    "region": "Caribe",
+    "shortDescription": "Ciudad amurallada con playas paradisíacas y el encanto colonial más vibrante del Caribe colombiano.",
+    "description": "Cartagena de Indias es una joya colonial en la costa caribeña colombiana. Sus calles empedradas, murallas históricas, balcones floridos y playas de arena blanca la convierten en uno de los destinos más visitados de Sudamérica. El centro histórico, declarado Patrimonio de la Humanidad por la UNESCO, cautiva con su arquitectura colonial perfectamente conservada, sus plazas llenas de vida y sus increíbles puestas de sol sobre las murallas. Disfruta de su vida nocturna, su deliciosa gastronomía fusión caribeña y el cálido clima tropical que invita a explorar cada rincón.",
+    "price": 890000,
+    "currency": "COP",
+    "rating": 4.8,
+    "duration": "4 días / 3 noches",
+    "image": "https://images.unsplash.com/photo-1714686495394-73e2bb1bbd39?w=800&q=80",
+    "images": [
+      "https://images.unsplash.com/photo-1714686495394-73e2bb1bbd39?w=800&q=80",
+      "https://images.unsplash.com/photo-1633394027858-fff49145f120?w=800&q=80",
+      "https://images.unsplash.com/photo-1714686375664-5f43a00051ea?w=800&q=80",
+      "https://images.unsplash.com/photo-1651421978310-3cbbfd26d82f?w=800&q=80"
+    ],
+    "hotels": [
+      { "name": "Hotel Santa Clara", "price": 320000, "rating": 4.7, "stars": 5, "type": "Lujo" },
+      { "name": "Casa de la Compañía", "price": 245000, "rating": 4.5, "stars": 4, "type": "Boutique" },
+      { "name": "Hotel Caribe", "price": 180000, "rating": 4.3, "stars": 4, "type": "Premium" },
+      { "name": "GHL Hotel Cartagena", "price": 120000, "rating": 4.1, "stars": 3, "type": "Económico" }
+    ],
+    "activities": ["City tour colonial", "Islas del Rosario", "Volcán del Totumo", "Gastronomía local"]
+  },
+  {
+    "id": 2,
+    "name": "Museo Subterráneo Monumental 180",
+    "region": "Andina",
+    "shortDescription": "Primer museo subterráneo del mundo, a 180 metros de profundidad en las entrañas de la Catedral de Sal de Zipaquirá.",
+    "description": "Inaugurado en mayo de 2024, el Museo Subterráneo Monumental 180 es el primer museo bajo tierra del mundo, ubicado a 180 metros de profundidad dentro de la majestuosa Catedral de Sal de Zipaquirá, en Cundinamarca. Este espacio cultural único alberga 22 obras esculpidas en roca de sal y mármol, creadas por artistas de diversos países del mundo. Once esculturas en relieve decoran las paredes de sal y otras once en bloques de mármol conforman una experiencia artística y espiritual inmersiva. Los visitantes recorren pasajes iluminados que revelan murales de alto y bajo relieve, en un viaje que fusiona la minería, la fe, el arte y la historia. La entrada al museo está incluida con el pasaporte de la Catedral de Sal, considerada la primera maravilla arquitectónica de Colombia.",
+    "price": 75000,
+    "currency": "COP",
+    "rating": 4.7,
+    "duration": "1 día / visita guiada",
+    "image": "https://images.unsplash.com/photo-1622343918860-c9243e619cd3?w=800&q=80",
+    "images": [
+      "https://images.unsplash.com/photo-1622343918860-c9243e619cd3?w=800&q=80",
+      "https://images.unsplash.com/photo-1766934697091-9c2c803b05d6?w=800&q=80",
+      "https://images.unsplash.com/photo-1712516711073-04503dc15a89?w=800&q=80",
+      "https://images.unsplash.com/photo-1773169263929-d6e1d239c1c0?w=800&q=80"
+    ],
+    "hotels": [
+      { "name": "Hotel Zipaquirá Plaza", "price": 120000, "rating": 4.2, "stars": 3, "type": "Premium" },
+      { "name": "Hotel Casa Real", "price": 95000, "rating": 4.0, "stars": 3, "type": "Económico" },
+      { "name": "Cabañas Santa María", "price": 75000, "rating": 3.8, "stars": 2, "type": "Económico" }
+    ],
+    "activities": ["Recorrido Museo Monumental 180", "Catedral de Sal de Zipaquirá", "City tour Zipaquirá", "Tren de la Sabana desde Bogotá"]
+  },
+  {
+    "id": 3,
+    "name": "San Andrés",
+    "region": "Caribe Insular",
+    "shortDescription": "Paraíso de aguas cristalinas de siete colores, donde el Caribe se encuentra con la cultura isleña raizal.",
+    "description": "San Andrés es un paraíso en el mar Caribe colombiano, famoso por sus hipnotizantes aguas de siete colores que van desde el turquesa más claro hasta el azul profundo. Sus playas de arena blanca como Spratt Bight, Rocky Cay y Johnny Cay, junto con sus arrecifes de coral que forman parte de la Reserva de la Biosfera Seaflower, la convierten en un destino de ensueño. Es el lugar perfecto para buceo, snorkel, deportes acuáticos y relajación total. La cultura isleña raizal, su música reggae y su gastronomía caribeña con toque coconut complementan una experiencia única.",
+    "price": 1200000,
+    "currency": "COP",
+    "rating": 4.9,
+    "duration": "5 días / 4 noches",
+    "image": "https://images.unsplash.com/photo-1590523277543-a94d2e4eb00b?w=800&q=80",
+    "images": [
+      "https://images.unsplash.com/photo-1590523277543-a94d2e4eb00b?w=800&q=80",
+      "https://images.unsplash.com/photo-1592782985575-a96c6e647155?w=800&q=80",
+      "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=800&q=80",
+      "https://images.unsplash.com/photo-1540202404-a2f29016b523?w=800&q=80"
+    ],
+    "hotels": [
+      { "name": "Decameron Aquarium", "price": 380000, "rating": 4.4, "stars": 4, "type": "Premium" },
+      { "name": "Hotel Sunrise Beach", "price": 295000, "rating": 4.3, "stars": 4, "type": "Premium" },
+      { "name": "Casa Harb Hotel", "price": 190000, "rating": 4.0, "stars": 3, "type": "Económico" }
+    ],
+    "activities": ["Snorkel en Acuario", "Tour por la isla", "Cayo Bolívar", "Buceo profesional"]
+  },
+  {
+    "id": 4,
+    "name": "Santa Marta",
+    "region": "Caribe",
+    "shortDescription": "La ciudad más antigua de Colombia, donde la Sierra Nevada besa el mar Caribe en el Parque Tayrona.",
+    "description": "Santa Marta, fundada en 1525, es la ciudad más antigua de Colombia y un destino que combina historia, naturaleza y playas espectaculares. El Parque Nacional Natural Tayrona es el principal atractivo, con sus imponentes montañas cubiertas de selva tropical que descienden hasta playas de ensueño como Cabo San Juan, La Piscina y Bahía Concha. El centro histórico invita a recorrer sus calles, la Quinta de San Pedro Alejandrino donde murió Simón Bolívar, y el imponente puerto. Minca, en las montañas de la Sierra Nevada, ofrece cafetales, cascadas y vistas panorámicas del Caribe.",
+    "price": 650000,
+    "currency": "COP",
+    "rating": 4.5,
+    "duration": "4 días / 3 noches",
+    "image": "https://images.unsplash.com/photo-1564399331650-bbfe2aac0a04?w=800&q=80",
+    "images": [
+      "https://images.unsplash.com/photo-1564399331650-bbfe2aac0a04?w=800&q=80",
+      "https://images.unsplash.com/photo-1612815867823-85cf0957890b?w=800&q=80",
+      "https://images.unsplash.com/photo-1708716174714-0d25278ceeff?w=800&q=80",
+      "https://images.unsplash.com/photo-1708716175037-81903478ed5e?w=800&q=80"
+    ],
+    "hotels": [
+      { "name": "Irotama Resort", "price": 310000, "rating": 4.5, "stars": 5, "type": "Lujo" },
+      { "name": "Zuana Beach Resort", "price": 240000, "rating": 4.3, "stars": 4, "type": "Premium" },
+      { "name": "Hotel Tamacá", "price": 160000, "rating": 4.1, "stars": 3, "type": "Económico" }
+    ],
+    "activities": ["Parque Tayrona", "Ciudad Perdida", "Playa Blanca", "Minca y cafetales"]
+  },
+  {
+    "id": 5,
+    "name": "Eje Cafetero",
+    "region": "Andina",
+    "shortDescription": "Cuna del mejor café del mundo, con paisajes de colinas verdes infinitas y pueblos llenos de color y tradición.",
+    "description": "El Eje Cafetero es el corazón productor del café colombiano, una región de ensueño donde las montañas se visten de verde con interminables plantaciones de café. Sus pueblos tradicionales como Salento, Filandia y Salamina conservan la arquitectura colonial con fachadas coloridas y balcones floridos. El Valle del Cocora, con sus imponentes palmas de cera de hasta 60 metros de altura (el árbol nacional colombiano), ofrece senderos mágicos entre niebla y montañas. Las fincas cafeteras abren sus puertas para mostrar el proceso del café, desde la semilla hasta la taza, mientras los termales naturales de Santa Rosa invitan a la relajación total.",
+    "price": 580000,
+    "currency": "COP",
+    "rating": 4.7,
+    "duration": "4 días / 3 noches",
+    "image": "https://images.unsplash.com/photo-1737914692082-a421d0a39b81?w=800&q=80",
+    "images": [
+      "https://images.unsplash.com/photo-1737914692082-a421d0a39b81?w=800&q=80",
+      "https://images.unsplash.com/photo-1631137697490-f43817277ebd?w=800&q=80",
+      "https://images.unsplash.com/photo-1572882602941-ba4fba8d3b1f?w=800&q=80",
+      "https://images.unsplash.com/photo-1532443603613-61fa154742cd?w=800&q=80"
+    ],
+    "hotels": [
+      { "name": "Hotel San Sebastián", "price": 220000, "rating": 4.5, "stars": 4, "type": "Premium" },
+      { "name": "Finca Hotel El Encanto", "price": 180000, "rating": 4.4, "stars": 4, "type": "Boutique" },
+      { "name": "Hotel El Vergel", "price": 120000, "rating": 4.0, "stars": 3, "type": "Económico" },
+      { "name": "Hostal Casa Quinta", "price": 75000, "rating": 3.8, "stars": 2, "type": "Económico" }
+    ],
+    "activities": ["Recorrido cafetero", "Valle del Cocora", "Termales Santa Rosa", "Filandia y Salento"]
+  },
+  {
+    "id": 6,
+    "name": "Bogotá",
+    "region": "Andina",
+    "shortDescription": "Capital cosmopolita a 2.600 metros, donde el arte, la cultura y la gastronomía se encuentran con los cerros orientales.",
+    "description": "Bogotá es una metrópolis vibrante enclavada en la altiplanicie andina a 2.600 metros sobre el nivel del mar. Su centro histórico, La Candelaria, cautiva con calles empedradas, casas coloniales de colores, murales de arte callejero y una energía creativa única. La ciudad alberga museos de clase mundial como el Museo del Oro con su impresionante colección de orfebrería precolombina, el Museo Botero con obras del maestro antioqueño, y el Museo Nacional. La escena gastronómica bogotana es una de las más diversas de Latinoamérica, con restaurantes de talla mundial, mientras que Monserrate ofrece la mejor vista panorámica de la sabana.",
+    "price": 550000,
+    "currency": "COP",
+    "rating": 4.4,
+    "duration": "3 días / 2 noches",
+    "image": "https://images.unsplash.com/photo-1738474429346-3fbef4ab70dd?w=800&q=80",
+    "images": [
+      "https://images.unsplash.com/photo-1738474429346-3fbef4ab70dd?w=800&q=80",
+      "https://images.unsplash.com/photo-1633624488546-059750ddde5b?w=800&q=80",
+      "https://images.unsplash.com/photo-1622432866666-26f106904a19?w=800&q=80",
+      "https://images.unsplash.com/photo-1666977461267-c0e924696510?w=800&q=80"
+    ],
+    "hotels": [
+      { "name": "Four Seasons Casa Medina", "price": 450000, "rating": 4.8, "stars": 5, "type": "Lujo" },
+      { "name": "Hotel BOG Luxury", "price": 280000, "rating": 4.5, "stars": 4, "type": "Premium" },
+      { "name": "Hotel Estelar Central", "price": 180000, "rating": 4.2, "stars": 4, "type": "Premium" },
+      { "name": "Hotel San Francisco", "price": 95000, "rating": 3.9, "stars": 3, "type": "Económico" }
+    ],
+    "activities": ["Museo del Oro", "La Candelaria", "Monserrate", "Zona Rosa y gastronomía"]
+  },
+  {
+    "id": 7,
+    "name": "Museo del Oro",
+    "region": "Andina",
+    "shortDescription": "El museo de oro más importante del mundo, con más de 55.000 piezas de orfebrería precolombina en Bogotá.",
+    "description": "El Museo del Oro del Banco de la República en Bogotá es una de las colecciones de orfebrería prehispánica más importantes del mundo. Con más de 55.000 piezas elaboradas en oro, tumbaga, cobre, cerámica y piedra por las culturas indígenas que habitaron Colombia antes de la llegada de los españoles, este museo ofrece un viaje fascinante por la historia, el simbolismo y la cosmovisión de los antiguos pobladores del territorio colombiano. La pieza más emblemática es la Balsa Muisca, que representa la ceremonia de El Dorado. Ubicado en pleno centro histórico de Bogotá, en la carrera 6 con calle 16, el museo abre de martes a sábado de 9:00 am a 6:00 pm y domingos de 10:00 am a 4:00 pm.",
+    "price": 4000,
+    "currency": "COP",
+    "rating": 4.7,
+    "duration": "2 horas / visita",
+    "image": "https://images.unsplash.com/photo-1502465396982-37b95ab30fbc?w=800&q=80",
+    "images": [
+      "https://images.unsplash.com/photo-1502465396982-37b95ab30fbc?w=800&q=80",
+      "https://images.unsplash.com/photo-1766802981817-776406db6807?w=800&q=80",
+      "https://images.unsplash.com/photo-1773169263929-d6e1d239c1c0?w=800&q=80",
+      "https://upload.wikimedia.org/wikipedia/commons/9/99/Gold_Museum%2C_Bogota_%2836145671394%29.jpg?w=800"
+    ],
+    "hotels": [
+      { "name": "Hotel de la Ópera", "price": 320000, "rating": 4.6, "stars": 5, "type": "Lujo" },
+      { "name": "Hotel BH La Candelaria", "price": 150000, "rating": 4.1, "stars": 3, "type": "Premium" },
+      { "name": "Casa de la Vega", "price": 85000, "rating": 3.9, "stars": 3, "type": "Económico" }
+    ],
+    "activities": ["Recorrido sala de ofrendas", "Balsa Muisca y El Dorado", "Audífono guiado", "Talleres interactivos"]
+  },
+  {
+    "id": 8,
+    "name": "Monserrate",
+    "region": "Andina",
+    "shortDescription": "El cerro tutelar de Bogotá, con una vista panorámica espectacular a 3.152 metros de altura.",
+    "description": "El Cerro de Monserrate es el mirador natural más emblemático de Bogotá. Con 3.152 metros sobre el nivel del mar, ofrece una vista panorámica impresionante de toda la ciudad y la sabana. Se puede ascender en funicular, teleférico o por el sendero peatonal de 2,5 km. En la cima se encuentra el Santuario del Señor Caído de Monserrate, un templo del siglo XVII que recibe peregrinos y visitantes durante todo el año. El cerro alberga restaurantes, tiendas de artesanías y miradores que lo convierten en el plan favorito de bogotanos y turistas, especialmente al atardecer cuando la ciudad se ilumina.",
+    "price": 25000,
+    "currency": "COP",
+    "rating": 4.6,
+    "duration": "Medio día",
+    "image": "https://images.unsplash.com/photo-1720067392108-89b9485aa090?w=800&q=80",
+    "images": [
+      "https://images.unsplash.com/photo-1720067392108-89b9485aa090?w=800&q=80",
+      "https://images.unsplash.com/photo-1700526032302-56d9d4f1fafd?w=800&q=80",
+      "https://images.unsplash.com/photo-1633624488546-059750ddde5b?w=800&q=80",
+      "https://images.unsplash.com/photo-1738474429346-3fbef4ab70dd?w=800&q=80"
+    ],
+    "hotels": [
+      { "name": "Hotel Casa de la Candelaria", "price": 180000, "rating": 4.3, "stars": 4, "type": "Premium" },
+      { "name": "Hotel BH Bicentenario", "price": 120000, "rating": 4.0, "stars": 3, "type": "Económico" }
+    ],
+    "activities": ["Ascenso en teleférico", "Ascenso en funicular", "Caminata ecológica", "Atardecer en el mirador"]
+  },
+  {
+    "id": 9,
+    "name": "Santuario de Las Lajas",
+    "region": "Andina",
+    "shortDescription": "Una majestuosa basílica gótica construida sobre un cañón, considerada una de las iglesias más bellas del mundo.",
+    "description": "El Santuario de Nuestra Señora del Rosario de Las Lajas es una impresionante basílica de estilo gótico ubicada en Ipiales, Nariño, construida sobre un puente que cruza el cañón del río Guáitara. Considerada una de las iglesias más hermosas del mundo, su construcción se debe a un milagro ocurrido en 1754 cuando la Virgen María se apareció en una laja (losa de piedra). La imagen de la Virgen quedó grabada milagrosamente en la roca y hoy es venerada por miles de peregrinos. El santuario, de 27 metros de altura, se alza 100 metros sobre el río, conectando ambos lados del cañón con su puente, creando una estampa arquitectónica y espiritual sobrecogedora.",
+    "price": 15000,
+    "currency": "COP",
+    "rating": 4.9,
+    "duration": "1 día / visita",
+    "image": "https://images.unsplash.com/photo-1592918454598-34d64c722e50?w=800&q=80",
+    "images": [
+      "https://images.unsplash.com/photo-1592918454598-34d64c722e50?w=800&q=80",
+      "https://images.unsplash.com/photo-1720067392108-89b9485aa090?w=800&q=80",
+      "https://images.unsplash.com/photo-1633624488546-059750ddde5b?w=800&q=80",
+      "https://images.unsplash.com/photo-1738474429346-3fbef4ab70dd?w=800&q=80"
+    ],
+    "hotels": [
+      { "name": "Hotel San Luis Ipiales", "price": 85000, "rating": 3.9, "stars": 3, "type": "Económico" },
+      { "name": "Hotel El Dorado Ipiales", "price": 65000, "rating": 3.7, "stars": 2, "type": "Económico" }
+    ],
+    "activities": ["Visita a la basílica", "Mirador del cañón", "Centro histórico Ipiales", "Frontera con Ecuador"]
+  },
+  {
+    "id": 10,
+    "name": "Guatapé",
+    "region": "Andina",
+    "shortDescription": "Pueblo de colores vibrantes y el imponente Peñón de Guatapé, con sus 740 escalones hacia el cielo.",
+    "description": "Guatapé es uno de los pueblos más coloridos y visitados de Colombia, famoso por sus fachadas decoradas con zócalos en relieve y el imponente Peñón de Guatapé (también conocido como Piedra del Peñol), una mole de granito de 220 metros de altura con 740 escalones que llevan a una vista panorámica espectacular del embalse y las islas verdes que lo rodean. El recorrido en lancha por el embalse revela paisajes de ensueño, mientras que las calles empedradas del pueblo invitan a perderse entre tiendas de artesanías, heladerías y restaurantes con gastronomía antioqueña tradicional.",
+    "price": 95000,
+    "currency": "COP",
+    "rating": 4.7,
+    "duration": "1 día / excursión",
+    "image": "https://images.unsplash.com/photo-1679605848614-b508dd4c4f85?w=800&q=80",
+    "images": [
+      "https://images.unsplash.com/photo-1679605848614-b508dd4c4f85?w=800&q=80",
+      "https://images.unsplash.com/photo-1697082390558-d97fb652007d?w=800&q=80",
+      "https://images.unsplash.com/photo-1727813658887-abf22d586862?w=800&q=80",
+      "https://images.unsplash.com/photo-1671240432065-2f6540c14709?w=800&q=80"
+    ],
+    "hotels": [
+      { "name": "Hotel Mirador del Peñón", "price": 160000, "rating": 4.2, "stars": 4, "type": "Premium" },
+      { "name": "Hostal Casa de Los Abuelos", "price": 85000, "rating": 4.0, "stars": 3, "type": "Económico" },
+      { "name": "Ecohousing Guatapé", "price": 65000, "rating": 3.8, "stars": 2, "type": "Económico" }
+    ],
+    "activities": ["Subida al Peñón", "Recorrido en lancha", "Tour de zócalos", "Parque principal"]
+  },
+  {
+    "id": 11,
+    "name": "Islas del Rosario",
+    "region": "Caribe",
+    "shortDescription": "Un archipiélago paradisíaco de 27 islas de coral con aguas cristalinas frente a Cartagena.",
+    "description": "El Parque Nacional Natural Corales del Rosario y de San Bernardo es un archipiélago de 27 islas de coral ubicado a una hora en lancha desde Cartagena. Sus aguas cristalinas, playas de arena blanca y arrecifes de coral lo convierten en el destino perfecto para snorkel, buceo y relax total. Las islas principales como Isla Grande, Isla del Rosario y Playa Blanca ofrecen restaurantes de mariscos frescos, hamacas frente al mar y piscinas naturales. El Oceanario, un acuario natural, permite aprender sobre la vida marina del Caribe colombiano, incluyendo tiburones, tortugas y delfines.",
+    "price": 180000,
+    "currency": "COP",
+    "rating": 4.5,
+    "duration": "1 día / excursión",
+    "image": "https://images.unsplash.com/photo-1682916605017-fc50310b0723?w=800&q=80",
+    "images": [
+      "https://images.unsplash.com/photo-1682916605017-fc50310b0723?w=800&q=80",
+      "https://images.unsplash.com/photo-1564399331650-bbfe2aac0a04?w=800&q=80",
+      "https://images.unsplash.com/photo-1612815867823-85cf0957890b?w=800&q=80",
+      "https://images.unsplash.com/photo-1592782985575-a96c6e647155?w=800&q=80"
+    ],
+    "hotels": [
+      { "name": "Hotel Isla del Sol", "price": 350000, "rating": 4.4, "stars": 4, "type": "Premium" },
+      { "name": "Ecohotel Isla Grande", "price": 220000, "rating": 4.1, "stars": 3, "type": "Económico" },
+      { "name": "Cabañas Playa Blanca", "price": 120000, "rating": 3.7, "stars": 2, "type": "Económico" }
+    ],
+    "activities": ["Snorkel en arrecifes", "Visita al Oceanario", "Kayak", "Gastronomía de mariscos"]
+  },
+  {
+    "id": 12,
+    "name": "Parque Arqueológico de San Agustín",
+    "region": "Andina",
+    "shortDescription": "Patrimonio de la Humanidad UNESCO, el mayor complejo de estatuas precolombinas en piedra de América Latina.",
+    "description": "El Parque Arqueológico de San Agustín, declarado Patrimonio de la Humanidad por la UNESCO en 1995, es uno de los sitios arqueológicos más importantes de América Latina. Ubicado en el departamento del Huila, alberga la colección más grande de estatuas y figuras talladas en piedra del continente, creadas por una civilización desconocida entre los siglos I y VIII d.C. Más de 500 estatuas monolíticas de hasta 7 metros de altura representan figuras humanas, animales y seres mitológicos que vigilan tumbas, dólmenes y sarcófagos. El parque está rodeado de un paisaje montañoso espectacular, con el cañón del río Magdalena como telón de fondo, creando una experiencia mística e inolvidable.",
+    "price": 50000,
+    "currency": "COP",
+    "rating": 4.8,
+    "duration": "2 días / 1 noche",
+    "image": "https://images.unsplash.com/photo-1612815867823-85cf0957890b?w=800&q=80",
+    "images": [
+      "https://images.unsplash.com/photo-1612815867823-85cf0957890b?w=800&q=80",
+      "https://upload.wikimedia.org/wikipedia/commons/2/26/Tumba_Ind%C3%ADgena_Masculina_In_Situ%2C_monumento_arqueol%C3%B3gico_de_San_Agust%C3%ADn.JPG",
+      "https://images.unsplash.com/photo-1737914692082-a421d0a39b81?w=800&q=80",
+      "https://images.unsplash.com/photo-1572882602941-ba4fba8d3b1f?w=800&q=80"
+    ],
+    "hotels": [
+      { "name": "Hotel Yalconia", "price": 120000, "rating": 4.1, "stars": 3, "type": "Premium" },
+      { "name": "Finca Hotel El Mesón", "price": 85000, "rating": 3.9, "stars": 3, "type": "Económico" },
+      { "name": "Hostal San Agustín", "price": 55000, "rating": 3.6, "stars": 2, "type": "Económico" }
+    ],
+    "activities": ["Recorrido estatuario", "Bosque de las estatuas", "Museo arqueológico", "Cañón del Magdalena"]
+  }
+]
