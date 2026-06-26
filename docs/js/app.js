@@ -251,7 +251,7 @@ contactForm.addEventListener('submit', async (e) => {
     localStorage.setItem('adventour_contacts', JSON.stringify(contacts));
   } catch (_) {}
 
-  // Enviar al backend
+  // Enviar al backend (con fallback a FormSubmit)
   let ok = false;
   try {
     const res = await fetch('/api/contact', {
@@ -260,7 +260,20 @@ contactForm.addEventListener('submit', async (e) => {
       body: JSON.stringify(data)
     });
     ok = res.ok;
-  } catch (_) {}
+  } catch (_) {
+    try {
+      const fallbackRes = await fetch(FORMSUBMIT_URL, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+        body: JSON.stringify({
+          nombre: data.nombre, email: data.email,
+          destino: data.destino, mensaje: data.mensaje,
+          _subject: `Nuevo contacto — ${data.nombre}`
+        })
+      });
+      ok = fallbackRes.ok;
+    } catch (_2) {}
+  }
 
   // Restaurar botón
   submitBtn.disabled = false;
@@ -287,6 +300,28 @@ contactForm.addEventListener('submit', async (e) => {
 //  6. NEWSLETTER
 // ============================================================
 
+const FORMSUBMIT_URL = 'https://formsubmit.co/ajax/migueartun@gmail.com';
+
+async function subscribeEmail(email) {
+  const res = await fetch('/api/subscribe', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ email })
+  });
+  if (!res.ok) throw new Error('API error');
+  return res.json();
+}
+
+async function subscribeEmailFallback(email) {
+  const res = await fetch(FORMSUBMIT_URL, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+    body: JSON.stringify({ email, _subject: 'Nueva suscripción Adventour' })
+  });
+  if (!res.ok) throw new Error('Fallback error');
+  return { success: true, message: '¡Gracias por suscribirte! Te llegará un correo de bienvenida.' };
+}
+
 if (newsletterForm) {
   newsletterForm.addEventListener('submit', async (e) => {
     e.preventDefault();
@@ -302,24 +337,30 @@ if (newsletterForm) {
     newsletterBtn.disabled = true;
     newsletterBtn.innerHTML = '<span class="spinner-border spinner-border-sm me-2"></span>Suscribiendo...';
 
+    let data;
     try {
-      const res = await fetch('/api/subscribe', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ email })
-      });
-      const data = await res.json();
-      if (data.success) {
-        newsletterAlert.className = 'alert alert-success';
-        newsletterAlert.innerHTML = '<i class="bi bi-check-circle-fill me-2"></i>' + data.message;
-        newsletterForm.reset();
-      } else {
-        newsletterAlert.className = 'alert alert-danger';
-        newsletterAlert.innerHTML = '<i class="bi bi-exclamation-triangle-fill me-2"></i>' + data.message;
-      }
+      data = await subscribeEmail(email);
     } catch (_) {
+      try {
+        data = await subscribeEmailFallback(email);
+      } catch (_2) {
+        newsletterAlert.className = 'alert alert-danger';
+        newsletterAlert.innerHTML = '<i class="bi bi-exclamation-triangle-fill me-2"></i>Error de conexión. Intenta de nuevo.';
+        newsletterAlert.style.display = '';
+        newsletterBtn.disabled = false;
+        newsletterBtn.innerHTML = orig;
+        setTimeout(() => { newsletterAlert.style.display = 'none' }, 8000);
+        return;
+      }
+    }
+
+    if (data.success) {
+      newsletterAlert.className = 'alert alert-success';
+      newsletterAlert.innerHTML = '<i class="bi bi-check-circle-fill me-2"></i>' + data.message;
+      newsletterForm.reset();
+    } else {
       newsletterAlert.className = 'alert alert-danger';
-      newsletterAlert.innerHTML = '<i class="bi bi-exclamation-triangle-fill me-2"></i>Error de conexión. Intenta de nuevo.';
+      newsletterAlert.innerHTML = '<i class="bi bi-exclamation-triangle-fill me-2"></i>' + data.message;
     }
     newsletterAlert.style.display = '';
     newsletterBtn.disabled = false;
