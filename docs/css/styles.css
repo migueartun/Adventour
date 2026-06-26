@@ -979,7 +979,37 @@ h1, h2, h3, h4, h5, h6 {
   margin-right: 6px;
 }
 
+/* Tablet */
+@media (max-width: 768px) {
+  .newsletter-section .section-title {
+    font-size: 1.8rem;
+  }
+  .newsletter-section .section-subtitle {
+    font-size: 0.95rem;
+  }
+  .newsletter-form {
+    max-width: 100%;
+  }
+  .newsletter-benefits {
+    gap: 10px 20px;
+  }
+}
+
+/* Móvil */
 @media (max-width: 576px) {
+  .newsletter-section {
+    padding: 3rem 0;
+  }
+  .newsletter-section .section-title {
+    font-size: 1.4rem;
+  }
+  .newsletter-section .section-subtitle {
+    font-size: 0.88rem;
+  }
+  .newsletter-section .section-subtitle-top {
+    font-size: 0.7rem;
+    letter-spacing: 3px;
+  }
   .newsletter-form .input-group {
     flex-direction: column;
     border-radius: 16px;
@@ -989,16 +1019,20 @@ h1, h2, h3, h4, h5, h6 {
     border-right: 2px solid rgba(201, 169, 110, 0.2);
     border-bottom: none;
     text-align: center;
+    padding: 14px 20px;
+    font-size: 0.95rem;
   }
   .newsletter-form .btn-rustic {
     border-radius: 0 0 16px 16px !important;
-    min-height: 50px;
+    min-height: 48px;
+    font-size: 0.95rem;
+    padding: 12px 20px;
   }
   .newsletter-benefits {
-    gap: 10px 16px;
+    gap: 8px 12px;
   }
   .newsletter-benefits span {
-    font-size: 0.85rem;
+    font-size: 0.8rem;
   }
 }
 
