@@ -70,7 +70,7 @@ function buildWelcomeEmailHtml(email) {
               <p style="margin:0 0 6px;font-size:13px;color:#8B7355;">
                 &iquest;Quieres explorar nuestros destinos?
               </p>
-              <a href="https://github.com/migueartun/" target="_blank" style="display:inline-block;background:#7A4A2E;color:#FFF8F0;text-decoration:none;padding:10px 28px;border-radius:50px;font-weight:600;font-size:14px;">
+              <a href="https://github.com/migueartun/Adventour" target="_blank" style="display:inline-block;background:#7A4A2E;color:#FFF8F0;text-decoration:none;padding:10px 28px;border-radius:50px;font-weight:600;font-size:14px;">
                 &#x1F310; Ver p&aacute;gina de turismo
               </a>
             </td></tr>
