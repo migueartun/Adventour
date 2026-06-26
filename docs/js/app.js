@@ -251,7 +251,7 @@ contactForm.addEventListener('submit', async (e) => {
     localStorage.setItem('adventour_contacts', JSON.stringify(contacts));
   } catch (_) {}
 
-  // Enviar al backend (con fallback a FormSubmit)
+  // Enviar al backend (con fallback a FormSubmit vía no-cors)
   let ok = false;
   try {
     const res = await fetch('/api/contact', {
@@ -262,16 +262,12 @@ contactForm.addEventListener('submit', async (e) => {
     ok = res.ok;
   } catch (_) {
     try {
-      const fallbackRes = await fetch(FORMSUBMIT_URL, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
-        body: JSON.stringify({
-          nombre: data.nombre, email: data.email,
-          destino: data.destino, mensaje: data.mensaje,
-          _subject: `Nuevo contacto — ${data.nombre}`
-        })
+      await postFormSubmit({
+        nombre: data.nombre, email: data.email, _replyto: data.email,
+        destino: data.destino, mensaje: data.mensaje,
+        _subject: `Nuevo contacto — ${data.nombre}`
       });
-      ok = fallbackRes.ok;
+      ok = true;
     } catch (_2) {}
   }
 
@@ -302,24 +298,19 @@ contactForm.addEventListener('submit', async (e) => {
 
 const FORMSUBMIT_URL = 'https://formsubmit.co/ajax/migueartun@gmail.com';
 
+function postFormSubmit(data) {
+  const params = new URLSearchParams();
+  Object.keys(data).forEach(k => params.append(k, data[k]));
+  return fetch(FORMSUBMIT_URL, { method: 'POST', mode: 'no-cors', body: params });
+}
+
 async function subscribeEmail(email) {
   const res = await fetch('/api/subscribe', {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
+    method: 'POST', headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({ email })
   });
   if (!res.ok) throw new Error('API error');
   return res.json();
-}
-
-async function subscribeEmailFallback(email) {
-  const res = await fetch(FORMSUBMIT_URL, {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
-    body: JSON.stringify({ email, _subject: 'Nueva suscripción Adventour' })
-  });
-  if (!res.ok) throw new Error('Fallback error');
-  return { success: true, message: '¡Gracias por suscribirte! Te llegará un correo de bienvenida.' };
 }
 
 if (newsletterForm) {
@@ -337,35 +328,28 @@ if (newsletterForm) {
     newsletterBtn.disabled = true;
     newsletterBtn.innerHTML = '<span class="spinner-border spinner-border-sm me-2"></span>Suscribiendo...';
 
-    let data;
+    let ok = false;
     try {
-      data = await subscribeEmail(email);
+      const res = await subscribeEmail(email);
+      ok = res.success;
     } catch (_) {
       try {
-        data = await subscribeEmailFallback(email);
-      } catch (_2) {
-        newsletterAlert.className = 'alert alert-danger';
-        newsletterAlert.innerHTML = '<i class="bi bi-exclamation-triangle-fill me-2"></i>Error de conexión. Intenta de nuevo.';
-        newsletterAlert.style.display = '';
-        newsletterBtn.disabled = false;
-        newsletterBtn.innerHTML = orig;
-        setTimeout(() => { newsletterAlert.style.display = 'none' }, 8000);
-        return;
-      }
+        await postFormSubmit({ email, _subject: 'Nueva suscripción Adventour' });
+        ok = true;
+      } catch (_2) {}
     }
 
-    if (data.success) {
+    if (ok) {
       newsletterAlert.className = 'alert alert-success';
-      newsletterAlert.innerHTML = '<i class="bi bi-check-circle-fill me-2"></i>' + data.message;
+      newsletterAlert.innerHTML = '<i class="bi bi-check-circle-fill me-2"></i>¡Gracias por suscribirte! Te llegará un correo de bienvenida.';
       newsletterForm.reset();
     } else {
       newsletterAlert.className = 'alert alert-danger';
-      newsletterAlert.innerHTML = '<i class="bi bi-exclamation-triangle-fill me-2"></i>' + data.message;
+      newsletterAlert.innerHTML = '<i class="bi bi-exclamation-triangle-fill me-2"></i>Error de conexión. Intenta de nuevo.';
     }
     newsletterAlert.style.display = '';
     newsletterBtn.disabled = false;
     newsletterBtn.innerHTML = orig;
-
     setTimeout(() => { newsletterAlert.style.display = 'none' }, 8000);
   });
 }
