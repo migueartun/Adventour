@@ -2,6 +2,9 @@
 //  ADVENTOUR — APP PRINCIPAL
 // ============================================================
 
+// ===== EMAILJS (para GitHub Pages) =====
+emailjs.init('A3DErctghIL-byJyk');
+
 // ===== STATE =====
 let destinations = [];
 let modalInstance = null;
@@ -251,7 +254,7 @@ contactForm.addEventListener('submit', async (e) => {
     localStorage.setItem('adventour_contacts', JSON.stringify(contacts));
   } catch (_) {}
 
-  // Enviar al backend (con fallback a FormSubmit vía no-cors)
+  // Enviar al backend local (si no, se guarda en localStorage igual)
   let ok = false;
   try {
     const res = await fetch('/api/contact', {
@@ -261,14 +264,7 @@ contactForm.addEventListener('submit', async (e) => {
     });
     ok = res.ok;
   } catch (_) {
-    try {
-      await postFormSubmit({
-        nombre: data.nombre, email: data.email, _replyto: data.email,
-        destino: data.destino, mensaje: data.mensaje,
-        _subject: `Nuevo contacto — ${data.nombre}`
-      });
-      ok = true;
-    } catch (_2) {}
+    ok = true; // Ya está en localStorage, se enviará cuando el servidor local esté activo
   }
 
   // Restaurar botón
@@ -296,15 +292,14 @@ contactForm.addEventListener('submit', async (e) => {
 //  6. NEWSLETTER
 // ============================================================
 
-const FORMSUBMIT_URL = 'https://formsubmit.co/ajax/migueartun@gmail.com';
+const EMAILJS_SERVICE = 'service_ti25s2q';
+const EMAILJS_TEMPLATE = 'template_gddfvch';
 
-function postFormSubmit(data) {
-  const params = new URLSearchParams();
-  Object.keys(data).forEach(k => params.append(k, data[k]));
-  return fetch(FORMSUBMIT_URL, { method: 'POST', mode: 'no-cors', body: params });
+async function sendViaEmailJS(templateParams) {
+  await emailjs.send(EMAILJS_SERVICE, EMAILJS_TEMPLATE, templateParams);
 }
 
-async function subscribeEmail(email) {
+async function subscribeEmailLocal(email) {
   const res = await fetch('/api/subscribe', {
     method: 'POST', headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({ email })
@@ -330,11 +325,11 @@ if (newsletterForm) {
 
     let ok = false;
     try {
-      const res = await subscribeEmail(email);
+      const res = await subscribeEmailLocal(email);
       ok = res.success;
     } catch (_) {
       try {
-        await postFormSubmit({ email, _subject: 'Nueva suscripción Adventour' });
+        await sendViaEmailJS({ email });
         ok = true;
       } catch (_2) {}
     }
